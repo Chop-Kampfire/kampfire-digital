@@ -15,15 +15,15 @@
         }
 
         :root {
-            --pixel-red: #ef4444;
-            --pixel-orange: #f97316;
-            --pixel-yellow: #fbbf24;
-            --pixel-amber: #fcd34d;
-            --pixel-dark-green: #14532d;
-            --pixel-darker-green: #052e16;
-            --pixel-forest: #166534;
-            --pixel-lime: #84cc16;
-            --pixel-emerald: #10b981;
+            --pixel-red: #1e3a5f;
+            --pixel-orange: #3b82f6;
+            --pixel-yellow: #60a5fa;
+            --pixel-amber: #93c5fd;
+            --pixel-dark-green: #1e3a5f;
+            --pixel-darker-green: #0f172a;
+            --pixel-forest: #1d4ed8;
+            --pixel-lime: #38bdf8;
+            --pixel-emerald: #06b6d4;
             --pixel-white: #fef3c7;
             --pixel-gray: #a3a3a3;
         }
@@ -99,14 +99,14 @@
             color: var(--pixel-orange);
             text-shadow: 
                 4px 4px 0px var(--pixel-red),
-                0 0 20px rgba(251, 191, 36, 0.5);
+                0 0 20px rgba(96, 165, 250, 0.5);
             margin-bottom: 1rem;
             animation: glow 2s ease-in-out infinite alternate;
         }
 
         @keyframes glow {
-            from { text-shadow: 4px 4px 0px var(--pixel-red), 0 0 20px rgba(251, 191, 36, 0.5); }
-            to { text-shadow: 4px 4px 0px var(--pixel-red), 0 0 30px rgba(251, 191, 36, 0.8); }
+            from { text-shadow: 4px 4px 0px var(--pixel-red), 0 0 20px rgba(96, 165, 250, 0.5); }
+            to { text-shadow: 4px 4px 0px var(--pixel-red), 0 0 30px rgba(96, 165, 250, 0.8); }
         }
 
         /* Campfire as clickable entrance */
@@ -127,13 +127,13 @@
         .campfire-img {
             width: 300px;
             height: auto;
-            filter: drop-shadow(0 0 20px rgba(249, 115, 22, 0.6));
+            filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6));
             animation: fireGlow 2s ease-in-out infinite alternate;
         }
 
         @keyframes fireGlow {
-            from { filter: drop-shadow(0 0 20px rgba(249, 115, 22, 0.6)); }
-            to { filter: drop-shadow(0 0 40px rgba(249, 115, 22, 0.9)); }
+            from { filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.6)); }
+            to { filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.9)); }
         }
 
         .enter-text {
@@ -163,8 +163,8 @@
                     0deg,
                     transparent,
                     transparent 2px,
-                    rgba(251, 191, 36, 0.03) 2px,
-                    rgba(251, 191, 36, 0.03) 4px
+                    rgba(96, 165, 250, 0.03) 2px,
+                    rgba(96, 165, 250, 0.03) 4px
                 );
             background-color: var(--pixel-darker-green);
             position: relative;
@@ -250,7 +250,7 @@
         header {
             padding: 2rem 0;
             border-bottom: 4px solid var(--pixel-orange);
-            background: rgba(5, 46, 22, 0.9);
+            background: rgba(15, 23, 42, 0.9);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -289,7 +289,7 @@
         .nav-links a:hover {
             color: var(--pixel-yellow);
             border: 2px solid var(--pixel-yellow);
-            background: rgba(251, 191, 36, 0.1);
+            background: rgba(96, 165, 250, 0.1);
             transform: translateY(-2px);
         }
 
@@ -405,16 +405,16 @@
             padding: 2rem;
             margin-bottom: 2rem;
             box-shadow: 
-                8px 8px 0 rgba(249, 115, 22, 0.3),
-                inset 0 0 20px rgba(251, 191, 36, 0.1);
+                8px 8px 0 rgba(59, 130, 246, 0.3),
+                inset 0 0 20px rgba(96, 165, 250, 0.1);
             transition: all 0.3s;
         }
 
         .pixel-box:hover {
             transform: translate(-4px, -4px);
             box-shadow: 
-                12px 12px 0 rgba(249, 115, 22, 0.5),
-                inset 0 0 20px rgba(251, 191, 36, 0.2);
+                12px 12px 0 rgba(59, 130, 246, 0.5),
+                inset 0 0 20px rgba(96, 165, 250, 0.2);
             border-color: var(--pixel-yellow);
         }
 
@@ -482,7 +482,7 @@
         .portfolio-item:hover {
             transform: scale(1.05);
             border-color: var(--pixel-orange);
-            box-shadow: 0 0 30px rgba(249, 115, 22, 0.5);
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
         }
 
         .portfolio-header {
@@ -535,7 +535,7 @@
         .blog-post:hover {
             border-color: var(--pixel-orange);
             transform: translateX(10px);
-            box-shadow: -10px 0 20px rgba(251, 191, 36, 0.3);
+            box-shadow: -10px 0 20px rgba(96, 165, 250, 0.3);
         }
 
         .blog-date {
@@ -591,7 +591,31 @@
             transform: translateX(5px);
         }
 
-        /* Social Links */
+        
+        /* Author Profile */
+        .blog-author {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 100px;
+        }
+
+        .author-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--pixel-orange);
+            object-fit: cover;
+            margin-bottom: 0.5rem;
+        }
+
+        .author-name {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 0.6rem;
+            color: var(--pixel-lime);
+        }
+
+/* Social Links */
         .social-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -633,7 +657,7 @@
             padding: 3rem 0;
             text-align: center;
             border-top: 4px solid var(--pixel-orange);
-            background: rgba(5, 46, 22, 0.9);
+            background: rgba(15, 23, 42, 0.9);
         }
 
         footer p {
@@ -883,9 +907,9 @@
 
                     <div class="blog-posts">
                         <article class="blog-post">
-                            <div class="blog-date">
-                                <div class="blog-month">NOV</div>
-                                <div class="blog-day">01</div>
+                            <div class="blog-author">
+                                <img src="CHOP.jpg" alt="Chop" class="author-img">
+                                <span class="author-name">CHOP</span>
                             </div>
                             <div class="blog-content">
                                 <h3 class="blog-title">WHY COMMUNITIES BEAT VCS AND HOW</h3>
@@ -897,9 +921,9 @@
                         </article>
 
                         <article class="blog-post">
-                            <div class="blog-date">
-                                <div class="blog-month">2024</div>
-                                <div class="blog-day">--</div>
+                            <div class="blog-author">
+                                <img src="CHOP.jpg" alt="Chop" class="author-img">
+                                <span class="author-name">CHOP</span>
                             </div>
                             <div class="blog-content">
                                 <h3 class="blog-title">PSEUDONYMITY, DIGITAL IDENTITY &amp; CRYPTO</h3>
@@ -911,9 +935,9 @@
                         </article>
 
                         <article class="blog-post">
-                            <div class="blog-date">
-                                <div class="blog-month">2024</div>
-                                <div class="blog-day">--</div>
+                            <div class="blog-author">
+                                <img src="CHOP.jpg" alt="Chop" class="author-img">
+                                <span class="author-name">CHOP</span>
                             </div>
                             <div class="blog-content">
                                 <h3 class="blog-title">FOUNDATIONAL COMMUNITY</h3>
@@ -925,9 +949,9 @@
                         </article>
 
                         <article class="blog-post">
-                            <div class="blog-date">
-                                <div class="blog-month">2024</div>
-                                <div class="blog-day">--</div>
+                            <div class="blog-author">
+                                <img src="CHOP.jpg" alt="Chop" class="author-img">
+                                <span class="author-name">CHOP</span>
                             </div>
                             <div class="blog-content">
                                 <h3 class="blog-title">CREATING A COMMUNITY CULT(URE)</h3>
@@ -939,9 +963,9 @@
                         </article>
 
                         <article class="blog-post">
-                            <div class="blog-date">
-                                <div class="blog-month">2024</div>
-                                <div class="blog-day">--</div>
+                            <div class="blog-author">
+                                <img src="CHOP.jpg" alt="Chop" class="author-img">
+                                <span class="author-name">CHOP</span>
                             </div>
                             <div class="blog-content">
                                 <h3 class="blog-title">CRABS IN A BUCKET: A CRYPTO SEAFOOD BOIL</h3>
@@ -953,9 +977,9 @@
                         </article>
 
                         <article class="blog-post">
-                            <div class="blog-date">
-                                <div class="blog-month">2024</div>
-                                <div class="blog-day">--</div>
+                            <div class="blog-author">
+                                <img src="CHOP.jpg" alt="Chop" class="author-img">
+                                <span class="author-name">CHOP</span>
                             </div>
                             <div class="blog-content">
                                 <h3 class="blog-title">WEB3 AND RUNESCAPE: THE CONNECTION</h3>
@@ -977,7 +1001,7 @@
                     </div>
 
                     <div class="social-grid">
-                        <a href="https://twitter.com" target="_blank" class="social-box">
+                        <a href="https://x.com/CHOPPAtheSHARK" target="_blank" class="social-box">
                             <div class="social-icon">🐦</div>
                             <div class="social-name">TWITTER</div>
                         </a>
@@ -989,9 +1013,9 @@
                             <div class="social-icon">💼</div>
                             <div class="social-name">LINKEDIN</div>
                         </a>
-                        <a href="https://discord.com" target="_blank" class="social-box">
-                            <div class="social-icon">🎮</div>
-                            <div class="social-name">DISCORD</div>
+                        <a href="https://t.me/ChoppaTheShark" target="_blank" class="social-box">
+                            <div class="social-icon">✈️</div>
+                            <div class="social-name">TELEGRAM</div>
                         </a>
                         <a href="mailto:hello@kamfire.digital" class="social-box">
                             <div class="social-icon">📧</div>
